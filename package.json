@@ -1,0 +1,19 @@
+{
+  "name": "cordova-plugin-media-permissions",
+  "version": "0.0.1",
+  "description": "A cordova plugin to ask for and check status of audio and camera permissions.",
+  "license": "MIT",
+  "cordova": {
+    "id": "cordova-plugin-media-permissions",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=5.0.0"
+    }
+  ]
+}

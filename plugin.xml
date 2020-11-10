@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-media-permissions" version="0.0.1">
+    <name>MediaPermissions</name>
+
+    <description>A cordova plugin to ask for and check status of audio and camera permissions.</description>
+    <license>MIT</license>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+
+    <js-module src="www/MediaPermissions.js" name="audioPermissions">
+        <clobbers target="cordova.plugins.mediaPermissions"/>
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="MediaPermissions">
+                <param name="android-package" value="com.android.plugins.MediaPermissions"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/MediaPermissions.java" target-dir="src/com/android/plugins"/>
+    </platform>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="MediaPermissions">
+                <param name="ios-package" value="CDVMediaPermissions"/>
+                <param name="onload" value="true"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/CDVMediaPermissions.h"/>
+        <source-file src="src/ios/CDVMediaPermissions.m"/>
+    </platform>
+</plugin>
