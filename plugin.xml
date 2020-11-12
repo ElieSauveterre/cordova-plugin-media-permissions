@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="cordova-plugin-media-permissions" version="0.0.1">
+        id="cordova-plugin-media-permissions" version="0.0.2">
     <name>MediaPermissions</name>
 
     <description>A cordova plugin to ask for and check status of audio and camera permissions.</description>
